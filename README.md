@@ -1,20 +1,23 @@
 # A Kernel Seedling
-TODO: intro
+
+This is a kernel module designed for Arch Linux that generates a process at /proc/count. When you type "cat /proc/count", it prints the number of processes. To get the number, the module looks at the kernel's process table. This is a basic way to see some of what the kernel is doing.
 
 ## Building
 ```shell
-TODO: cmd for build
+make
+sudo insmod proc_count.ko
 ```
 
 ## Running
 ```shell
-TODO: cmd for running binary
+cat /proc/count
 ```
 TODO: results?
 
 ## Cleaning Up
 ```shell
-TODO: cmd for cleaning the built binary
+sudo rmmod proc_count
+make clean
 ```
 
 ## Testing
